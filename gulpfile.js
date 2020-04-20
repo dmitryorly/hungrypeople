@@ -28,7 +28,7 @@ function buildSass() {
 }
 
 function clear() {
-  return del('dist')
+  return del(['dist/*', '!dist/fonts', '!dist/img'])
 }
 
 function serve() {
