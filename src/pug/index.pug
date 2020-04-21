@@ -43,8 +43,8 @@ html(lang="en")
             p.header__subtitle  RESTAURANT
             h1.header__title HUNGRY PEOPLE
             .header__buttons
-              a.header__button.header__button_fill(href="#!") BOOK TABLE
-              a.header__button(href="#!") EXPLORE
+              a.header__button.header__button_fill.button.button_fill(href="#!") BOOK TABLE
+              a.header__button.button.button_o(href="#!") EXPLORE
             a.header__scroll(href="#!")
               i.fas.fa-chevron-down.header__scroll-icon
           .header__social
@@ -66,6 +66,7 @@ html(lang="en")
             .about__picture.picture.picture-decor.picture-decor_right
               img.about__img.img(src="img/about-pic.jpg")
 
+    // TEAM
     section.team
       .container
         h2.team__heading.heading.color_light OUR TEAM
@@ -78,8 +79,26 @@ html(lang="en")
             h3.team__title.title.color_light MASTER CHEF
             p.team__subtitle.subtitle.color_light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
             p.team__text.text.color_light Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
-
-            
+    
+    // BOOKING
+    section.booking
+      .container
+        .grid-container
+          .grid-left
+            h3.booking__title.title BOOK A TABLE
+            form.booking__form(action="#!")
+              input.booking__input.input(type="text" placeholder="Name")
+              input.booking__input.input(type="text" placeholder="Email")
+              input.booking__input.input(type="text" placeholder="Phone")
+              input.booking__input.input(type="text" placeholder="People")
+              input.booking__input.input(type="text" placeholder="Date (mm/dd)")
+              input.booking__input.input(type="text" placeholder="Time")
+              button.booking__submit.button.button_fill BOOK NOW
+              
+          .grid-right
+            .booking__picture.picture.picture-decor.picture-decor_right
+              img.booking__img.img(src="img/booking-pic.jpg")
+        p.booking__caption.caption Mon - Fri: <span class="bold">8PM - 10PM</span>, Sat - Sun: <span class="bold">8PM - 3AM</span>, Phone: <span class="bold">+40 729 131 637/+40 726 458 782  </span>
 
     // scripts          
     script(src="https://kit.fontawesome.com/091e2c3823.js" crossorigin="anonymous")        
