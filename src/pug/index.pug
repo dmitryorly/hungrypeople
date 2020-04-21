@@ -9,5 +9,48 @@ html(lang="en")
       href="main.css"
       )
   body
-    // comment
-    h1 Hello world
+    header.header
+      .container
+        .header__top
+          nav.header__nav
+            ul.header__list
+              li.header__item 
+                a.header__link(href="#!") HOME
+              li.header__item 
+                a.header__link(href="#!") ABOUT
+              li.header__item 
+                a.header__link(href="#!") TEAM
+              li.header__item 
+                a.header__link(href="#!") BOOKING
+    
+          .header__logo
+            img.header__img(src="img/svg/logo.svg")
+    
+          nav.header__nav
+            ul.header__list
+              li.header__item 
+                a.header__link(href="#!") MENU
+              li.header__item 
+                a.header__link(href="#!") GALERIE
+              li.header__item 
+                a.header__link(href="#!") EVENTS
+              li.header__item 
+                a.header__link(href="#!") CONTACT
+        .header__content
+          .header__schedule 
+            p.header__schedule-text Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM
+          .header__main
+            .header__subtitle  RESTAURANT
+            h1.header__title HUNGRY PEOPLE
+            .header__buttons
+              a.header__button(href="#!")
+              a.header__button(href="#!")
+            a.header__scroll(href="#!")
+          .header__social
+            a.header__link_circle(href="#!")
+              img.header__social-icon(src="img/svg/icon-fb.svg")
+            a.header__link_circle(href="#!")
+              img.header__social-icon(src="img/svg/icon-tw.svg")
+            a.header__link_circle(href="#!")
+              img.header__social-icon(src="img/svg/icon-inst.svg")
+          
