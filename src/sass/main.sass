@@ -176,12 +176,18 @@ section, .header
 
 .about,
 .team,
+.specialties
   &__title
     margin-bottom: 10px
   &__subtitle
     margin-bottom: 20px
   &__heading
     margin-bottom: 40px
+
+.team,  
+.specialties
+  padding-top: 30px
+
 
 // COMMON END
 
@@ -358,7 +364,6 @@ section, .header
 // TEAM START
 
 .team
-  padding-top: 30px
   padding-bottom: 100px
 
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/team-bg.jpg')
@@ -386,3 +391,41 @@ section, .header
 
 
 // BOOKING END
+
+// SPECIALTIES START
+
+.specialties
+  padding-bottom: 45px
+
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/specialties-bg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 50%
+  &__heading
+    margin-top: 40px
+    margin-bottom: 20px
+
+// SPECIALTIES END
+
+// SLIDER START
+
+.slider
+  &__indicators
+    margin-top: 45px
+    text-align: center
+
+  &__indicator
+    display: inline-block
+    height: 10px
+    width: 10px
+
+    background-color: #ffffff
+    cursor: pointer
+    border-radius: 50%
+    opacity: .5
+    &:not(:first-child)
+      margin-left: 20px
+    &_active
+      opacity: 1
+
+// SLIDER END
