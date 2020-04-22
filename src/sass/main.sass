@@ -269,8 +269,6 @@ section, .header
     flex-basis: 100%
 
   &__schedule
-    position: relative
-
     display: flex
     flex-direction: column
     justify-content: center
@@ -279,11 +277,10 @@ section, .header
     font-weight: 700
 
     &-text
-      position: absolute
-      top: 50%
-      left: -50%
+      margin: 0
       white-space: nowrap
-      transform: rotate(-90deg)
+      writing-mode: vertical-rl
+      transform: rotate(180deg)
   
   &__social
     display: flex
