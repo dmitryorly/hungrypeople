@@ -117,5 +117,32 @@ html(lang="en")
           li.slider__indicator
           li.slider__indicator.slider__indicator_active
           li.slider__indicator
+
+    //MENU
+    section.menu
+      .container
+        .menu__top
+          h3.menu__title.title DELICIOUS MENU
+          p.menu__subtitle.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+          .menu__categories
+            a.menu__category(href="#!") SOUPE
+            a.menu__category(href="#!") PIZZA
+            a.menu__category(href="#!") PASTA
+            a.menu__category(href="#!") DESERT
+            a.menu__category(href="#!") WINE
+            a.menu__category(href="#!") BEER
+            a.menu__category(href="#!") DRINKS
+
+        .menu__grid
+          mixin menu-item
+            .menu__grid-item
+              .menu__position PIZZA QUATRO STAGIONI  . . . .
+              .menu__price 55,68 USD
+              .menu__description Integer ullamcorper neque eu purus euismod
+          - for (var i = 0; i < 3 * 7; i++)
+            +menu-item 
+          
+          
+            
     // scripts          
     script(src="https://kit.fontawesome.com/091e2c3823.js" crossorigin="anonymous")        
