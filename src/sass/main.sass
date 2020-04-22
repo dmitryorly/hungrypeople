@@ -169,6 +169,28 @@ section, .header
     color: rgba(51, 51, 51, .5)
     opacity: 1
 
+.scroll-btn
+  width: 60px
+  height: 60px
+
+  border-radius: 50%
+  border: 1px solid rgba(255, 255, 255, 0.2)
+
+
+  &__inner
+    height: 40px
+    width: 40px
+
+    font-size: 20px
+    line-height: 40px
+    color: #333333
+
+    background-color: #ffffff
+    border-radius: 50%
+    margin: 10px auto
+
+  
+
 
 // GLOBAL END
 
@@ -331,33 +353,7 @@ section, .header
     margin-left: 20px
 
   &__scroll
-    position: relative
-
     display: inline-block
-    height: 40px
-    width: 40px
-
-    text-align: center
-    line-height: 40px
-
-    background-color: #fff
-    border-radius: 50%
-    &-icon
-      font-size: 20px
-      color: #333333
-    &::after
-      content: ''
-      position: absolute
-      top: -10px
-      left: -10px
-
-      display: block
-      width: 60px
-      height: 60px
-
-      border: 1px solid rgba(255, 255, 255, 0.2)
-      border-radius: 50%
-
 
 // HEADER END
 
