@@ -41,7 +41,7 @@ html
   padding-left: 80px
   margin: 0 auto
 
-section, .header
+section:not(.events), .header
   margin-bottom: 78px
 
 
@@ -199,7 +199,8 @@ section, .header
 .about,
 .team,
 .specialties,
-.menu
+.menu,
+.events
   &__title
     margin-bottom: 10px
   &__subtitle
@@ -208,7 +209,8 @@ section, .header
     margin-bottom: 40px
 
 .team,  
-.specialties
+.specialties,
+.events
   padding-top: 30px
 
 
@@ -470,6 +472,46 @@ section, .header
     font-size: 12px
     color: rgba(0, 0, 0, .5)
 
-    
+// MENU END
 
-// MENU END 
+// EVENTS START
+
+.events
+  position: relative
+
+  padding-top: 70px
+  padding-bottom: 45px
+
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/specialties-bg.jpg')
+  background-position: 50%
+  background-size: cover
+
+  &__caption
+    margin-top: 40px
+    margin-bottom: 20px
+
+  &__event
+    position: absolute
+    top: 0
+
+    padding-top: 20px
+    height: 100%
+
+    color: #ffffff
+    font-size: 24px
+    line-height: 80px
+    font-family: 'Banny Round'
+    writing-mode: vertical-lr
+    
+    background-color: #000000
+    border-radius: 0 5px 5px 0
+
+    &_left
+      left: 0
+      transform: rotate(180deg)
+
+    &_right
+      right: 0
+
+
+// EVENTS END
