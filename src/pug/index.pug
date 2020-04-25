@@ -156,6 +156,10 @@ html(lang="en")
               .events__event.events__event_left CORPORATE PZRTIES
               img.events__img.img(src="img/events-img-2.jpg")
         p.events__caption.caption.color_light For private events please call: <span class="bold">+40 729 131 637/+40 726 458 782</span> or use the contact form.
-            
+
+    section.gallery
+      - for (var i = 1; i <= 4; i++)
+        - var imgsrc = 'img/gallery-img-' + i + '.jpg' 
+        img(src=imgsrc).gallery__img
     // scripts          
     script(src="https://kit.fontawesome.com/091e2c3823.js" crossorigin="anonymous")        

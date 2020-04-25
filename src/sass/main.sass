@@ -41,7 +41,7 @@ html
   padding-left: 80px
   margin: 0 auto
 
-section:not(.events), .header
+section:not(.events, .map), .header
   margin-bottom: 78px
 
 
@@ -515,3 +515,16 @@ section:not(.events), .header
 
 
 // EVENTS END
+
+// GALLERY START
+
+.gallery
+  overflow-x: hidden
+  white-space: nowrap
+  &__img
+    max-width: 360px
+    max-height: 360px
+    width: 100%
+    height: auto
+
+// GALLERY END
