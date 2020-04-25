@@ -21,8 +21,11 @@ a
 
 ul
   list-style-type: none
+
+h1, h2, h3, ul, p
   padding: 0
   margin: 0
+
 
 // RESET END
 
@@ -41,8 +44,8 @@ html
   padding-left: 80px
   margin: 0 auto
 
-section:not(.events, .map), .header
-  margin-bottom: 78px
+section:not(.events):not(.map), .header
+  margin-bottom: 100px
 
 
 .grid
@@ -201,20 +204,27 @@ section:not(.events, .map), .header
 
 .about,
 .team,
+.booking,
 .specialties,
 .menu,
-.events
+.events,
+.contact
   &__title
-    margin-bottom: 10px
+    margin-bottom: 30px
   &__subtitle
     margin-bottom: 20px
   &__heading
     margin-bottom: 40px
 
+.contact,
+.menu
+  &__subtitle
+    margin-bottom: 50px
+
 .team,  
 .specialties,
 .events
-  padding-top: 30px
+  padding: 40px 0
 
 
 // COMMON END
@@ -386,7 +396,6 @@ section:not(.events, .map), .header
 
   &__caption
     margin-top: 40px
-    margin-bottom: 20px
 
 
 // BOOKING END
@@ -394,15 +403,10 @@ section:not(.events, .map), .header
 // SPECIALTIES START
 
 .specialties
-  padding-bottom: 45px
-
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/specialties-bg.jpg')
   background-repeat: no-repeat
   background-size: cover
   background-position: 50%
-  &__heading
-    margin-top: 40px
-    margin-bottom: 20px
 
 // SPECIALTIES END
 
@@ -433,8 +437,8 @@ section:not(.events, .map), .header
 
 .menu
   &__subtitle
-    margin-top: 30px
-    margin-bottom: 50px
+    margin: 0 auto 50px
+    max-width: 550px
   
   &__categories
     display: flex
@@ -481,9 +485,6 @@ section:not(.events, .map), .header
 
 .events
   position: relative
-
-  padding-top: 70px
-  padding-bottom: 45px
 
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/specialties-bg.jpg')
   background-position: 50%
@@ -535,9 +536,6 @@ section:not(.events, .map), .header
 // CONTACT START
 
 .contact
-  padding-top: 100px
-  &__title
-    margin-top: 0
   &__subtitle
     max-width: 550px
     margin-right: auto
@@ -546,6 +544,8 @@ section:not(.events, .map), .header
     display: flex
     justify-content: space-around
     align-items: center
+  &__contact:nth-child(2)
+    margin: 0 10px    
   &__contact > a
     color: rgba(51, 51, 51, 0.5)
 
@@ -554,7 +554,6 @@ section:not(.events, .map), .header
     display: grid
     gap: 10px
     grid-template-columns: repeat(12, 1fr)
-    margin-bottom: 100px
 
   &__input
     grid-column: span 4
