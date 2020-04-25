@@ -161,5 +161,27 @@ html(lang="en")
       - for (var i = 1; i <= 4; i++)
         - var imgsrc = 'img/gallery-img-' + i + '.jpg' 
         img(src=imgsrc).gallery__img
+
+    //CONTACT
+    section.contact
+      .container
+        h3.contact__title.title CONTACT
+        p.contact__subtitle.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+        form.contact__form
+          input(type="text" placeholder="Name").contact__input.input
+          input(type="text" placeholder="Email").contact__input.input
+          input(type="text" placeholder="Phone").contact__input.input
+          textarea(placeholder="Message").contact__textarea.input
+          .contact__contacts.caption.bold
+            p.contact__contact <i class="fas fa-map-marker-alt accent"></i> 5th London Boulevard, U.K.
+            p.contact__contact <i class="fas fa-phone accent"></i> <a href="tel:+40729131637">+40 729 131 637</a>/<a href="tel:+40726458782">+40 726 458 782</a>
+            p.contact__contact <i class="fas fa-envelope accent"></i> <a href="mailto:office@mindblister.com">office@mindblister.com</a>
+ 
+
+            //|  <span class="contact__contact"><i class="fas //fa-map-marker-alt accent"></i> 5th London //Boulevard, U.K.</span>
+            //|  <span class="contact__contact"><i class="fas //fa-phone accent"></i> +40 729 131 637/+40 726 458 //782</span>
+            //|  <span class="contact__contact"><i class="fas //fa-envelope accent"></i> office@mindblister.com</span>
+          .contact__button.button.button_fill SEND MESSAGE
+
     // scripts          
     script(src="https://kit.fontawesome.com/091e2c3823.js" crossorigin="anonymous")        
