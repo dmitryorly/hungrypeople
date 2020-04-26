@@ -32,6 +32,10 @@ function clear() {
   return del(['dist/*', '!dist/fonts', '!dist/img'])
 }
 
+function clearImg() {
+  return del('dist/img/**.*')
+}
+
 function serve() {
   sync.init({
     server: './dist'
@@ -44,10 +48,10 @@ function serve() {
 function compress() {
   return src('src/img/*')
     .pipe(imagemin())
-    .pipe(dest('dest/img'))
+    .pipe(dest('dist/img'))
 }
 
 exports.build = series(clear, buildHtml, buildSass);
 exports.clear = clear;
 exports.serve = series(clear, buildHtml, buildSass, serve);
-exports.compress = compress;
+exports.clearCompress = series(clearImg, compress);
