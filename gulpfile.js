@@ -6,6 +6,7 @@ const csso = require('gulp-csso');
 const del = require('del');
 const autoprefixer = require('gulp-autoprefixer');
 const sync = require('browser-sync').create();
+const imagemin = require('gulp-imagemin');
 
 function buildHtml() {
   return src('src/pug/**.pug')
@@ -40,6 +41,13 @@ function serve() {
   watch('src/sass/**.sass', series(buildSass)).on('change', sync.reload)
 }
 
-exports.build = series(clear, buildHtml, buildSass)
+function compress() {
+  return src('src/img/*')
+    .pipe(imagemin())
+    .pipe(dest('dest/img'))
+}
+
+exports.build = series(clear, buildHtml, buildSass);
 exports.clear = clear;
 exports.serve = series(clear, buildHtml, buildSass, serve);
+exports.compress = compress;
