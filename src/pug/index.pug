@@ -17,11 +17,11 @@ html(lang="en")
               li.header__item 
                 a.header__link(href="#!") HOME
               li.header__item 
-                a.header__link(href="#!") ABOUT
+                a.header__link(href="#about") ABOUT
               li.header__item 
-                a.header__link(href="#!") TEAM
+                a.header__link(href="#team") TEAM
               li.header__item 
-                a.header__link(href="#!") BOOKING
+                a.header__link(href="#booking") BOOKING
     
           .header__logo
             img.header__img(src="img/svg/logo.svg")
@@ -29,13 +29,13 @@ html(lang="en")
           nav.header__nav
             ul.header__list
               li.header__item 
-                a.header__link(href="#!") MENU
+                a.header__link(href="#menu") MENU
               li.header__item 
-                a.header__link(href="#!") GALERIE
+                a.header__link(href="#gallery") GALERIE
               li.header__item 
-                a.header__link(href="#!") EVENTS
+                a.header__link(href="#events") EVENTS
               li.header__item 
-                a.header__link(href="#!") CONTACT
+                a.header__link(href="#contact") CONTACT
         .header__content
           .header__schedule 
             p.header__schedule-text Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM
@@ -43,9 +43,9 @@ html(lang="en")
             p.header__subtitle  RESTAURANT
             h1.header__title HUNGRY PEOPLE
             .header__buttons
-              a.header__button.header__button_fill.button.button_fill(href="#!") BOOK TABLE
-              a.header__button.button.button_o(href="#!") EXPLORE
-            a.header__scroll.scroll-btn(href="#!")
+              a.header__button.header__button_fill.button.button_fill(href="#booking") BOOK TABLE
+              a.header__button.button.button_o(href="#about") EXPLORE
+            a.header__scroll.scroll-btn(href="#about")
               .scroll-btn__inner
                 i.fas.fa-chevron-down
           .header__social
@@ -56,7 +56,7 @@ html(lang="en")
             a.header__social-link(href="#!")
               i.fab.fa-instagram.header__social-icon
 
-    section.about
+    section#about.about
       .container
         .grid-container
           .grid-left
@@ -68,7 +68,7 @@ html(lang="en")
               img.about__img.img(src="img/about-pic.jpg")
 
     // TEAM
-    section.team
+    section#team.team
       .container
         h2.team__heading.heading.color_light OUR TEAM
         .grid-container
@@ -82,7 +82,7 @@ html(lang="en")
             p.team__text.text.color_light Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
     
     // BOOKING
-    section.booking
+    section#booking.booking
       .container
         .grid-container
           .grid-left
@@ -119,7 +119,7 @@ html(lang="en")
           li.slider__indicator
 
     //MENU
-    section.menu
+    section#menu.menu
       .container
         .menu__top
           h3.menu__title.title DELICIOUS MENU
@@ -143,7 +143,7 @@ html(lang="en")
             +menu-item 
           
     //EVENTS
-    section.events
+    section#events.events
       .container
         h2.events__heading.heading.color_light PRIVATE EVENTS
         .grid-container
@@ -157,13 +157,13 @@ html(lang="en")
               img.events__img.img(src="img/events-img-2.jpg")
         p.events__caption.caption.color_light For private events please call: <span class="bold">+40 729 131 637/+40 726 458 782</span> or use the contact form.
 
-    section.gallery
+    section#gallery.gallery
       - for (var i = 1; i <= 4; i++)
         - var imgsrc = 'img/gallery-img-' + i + '.jpg' 
         img(src=imgsrc).gallery__img
 
     //CONTACT
-    section.contact
+    section#contact.contact
       .container
         h3.contact__title.title CONTACT
         p.contact__subtitle.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
