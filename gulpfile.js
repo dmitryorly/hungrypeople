@@ -28,6 +28,11 @@ function buildSass() {
     .pipe(dest('dist'))
 }
 
+function buildJS() {
+  return src('src/js/main.js')
+    .pipe(dest('dist'))
+}
+
 function clear() {
   return del(['dist/*', '!dist/fonts', '!dist/img'])
 }
@@ -43,6 +48,7 @@ function serve() {
 
   watch('src/pug/**.pug', series(buildHtml)).on('change', sync.reload)
   watch('src/sass/**.sass', series(buildSass)).on('change', sync.reload)
+  watch('src/js/**.js', series(buildJS)).on('change', sync.reload)
 }
 
 function compress() {
@@ -51,7 +57,7 @@ function compress() {
     .pipe(dest('dist/img'))
 }
 
-exports.build = series(clear, buildHtml, buildSass);
+exports.build = series(clear, buildHtml, buildSass, buildJS);
 exports.clear = clear;
-exports.serve = series(clear, buildHtml, buildSass, serve);
+exports.serve = series(clear, buildHtml, buildSass, buildJS, serve);
 exports.clearCompress = series(clearImg, compress);
