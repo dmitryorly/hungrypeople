@@ -532,8 +532,12 @@ section:not(.events):not(.map), .header
     grid-template-columns: 1fr 1fr
     grid-gap: 10px
 
+    // transition: visibility 0s, opacity 0.5s linear    
+
     @media screen and ( max-width: 370px )
       display: none
+      // visibility: hidden
+      // opacity: 0
 
   &__input
     @media screen and ( max-width: 370px )
@@ -548,6 +552,9 @@ section:not(.events):not(.map), .header
 
   &__unwrap
     margin-bottom: 20px
+    
+
+
 
 
 // BOOKING END
@@ -794,24 +801,38 @@ section:not(.events):not(.map), .header
 .size_null
   height: 0
   width: 0
-
-.js-unwrap
-  position: relative
-
-  display: none
-  width: 100%
-
-  @media screen and ( max-width: 370px )
-    display: block
     
-  &::after
-    position: absolute
-    bottom: -20px
-    left: calc(50% - 10px)
-
-    content: ''
-    
-    display: block
-    border: 10px solid transparent
-    border-top: 10px solid $color-fill
 // JS-STYLES END
+
+// UNWRAP START
+
+.unwrap
+  &__label
+    position: relative
+  
+    display: none
+    width: 100%
+  
+    @media screen and ( max-width: 370px )
+      display: block
+      
+    &::after
+      position: absolute
+      bottom: -20px
+      left: calc(50% - 10px)
+  
+      content: ''
+      
+      display: block
+      border: 10px solid transparent
+      border-top: 10px solid $color-fill
+  
+  &__checkbox
+      display: none
+    
+  &__checkbox:checked ~ &__target
+    display: grid
+    // visibility: visible
+    // opacity: 1
+
+// UNWRAP END

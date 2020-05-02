@@ -92,8 +92,9 @@ html(lang="en")
         .grid-container
           .grid-left
             h3.booking__title.title BOOK A TABLE
-            a.button.button_fill.booking__unwrap.js-unwrap(href="#!") UNWRAP
-            form.booking__form(action="#!")
+            input#booking__unwrap.unwrap__checkbox(type="checkbox")
+            label.button.button_fill.booking__unwrap.unwrap__label(for="booking__unwrap") UNWRAP
+            form.booking__form.unwrap__target(action="#!")
               input.booking__input.input(type="text" placeholder="Name")
               input.booking__input.input(type="text" placeholder="Email")
               input.booking__input.input(type="text" placeholder="Phone")
@@ -174,8 +175,12 @@ html(lang="en")
       .container
         h3.contact__title.title CONTACT
         p.contact__subtitle.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
-        a.button.button_fill.contact__unwrap.js-unwrap(href="#!") UNWRAP
-        form.contact__form
+        //a.button.button_fill.contact__unwrap.js-unwrap(href="#!") UNWRAP
+        //form.contact__form
+
+        input#contact__unwrap.unwrap__checkbox(type="checkbox")
+        label.button.button_fill.contact__unwrap.unwrap__label(for="contact__unwrap") UNWRAP
+        form.contact__form.unwrap__target(action="#!")
           input(type="text" placeholder="Name").contact__input.input
           input(type="text" placeholder="Email").contact__input.input
           input(type="text" placeholder="Phone").contact__input.input
