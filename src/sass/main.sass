@@ -15,6 +15,8 @@ body
   font-size: 14px
   font-weight: 400
 
+  overflow-x: hidden
+
 a
   text-decoration: none
   color: #ffffff
@@ -272,30 +274,31 @@ section:not(.events):not(.map), .header
 // MOBILE START
 
 .mobile
-  position: absolute
+  position: fixed
   left: 0
+  top: 0
   z-index: 5
   overflow-y: auto
 
-  display: none
+  // display: none
   height: 100vh
   width: 100%
 
   transition: all .2s
 
   @media screen and ( max-width: 768px )
-    display: block
+    visibility: hidden
     transform: translateX(100%)
+
+  &__menu
+    overflow-y: auto
+
+  background-color: #333333
 
   &_show
     @media screen and ( max-width: 768px )
       transform: translateX(0)
-
-
-  &__menu
-    overflow-y: scroll
-
-  background-color: #333333  
+      visibility: visible
   
   &__btn
     position: absolute
@@ -310,7 +313,7 @@ section:not(.events):not(.map), .header
 
     cursor: pointer
 
-    @media screen and (max-width: 370px)
+    @media screen and (max-width: 375px)
       margin-top: 10px
 
     @media screen and (max-width: 768px)
@@ -389,7 +392,7 @@ section:not(.events):not(.map), .header
     @media screen and (max-width: 768px)
       margin: 25px auto 0
 
-    @media screen and (max-width: 370px)
+    @media screen and (max-width: 375px)
       margin-top: 10px
 
   &__link
@@ -518,7 +521,7 @@ section:not(.events):not(.map), .header
     @media screen and (max-width: 768px)
       font-size: 76px
 
-    @media screen and (max-width: 370px)
+    @media screen and (max-width: 375px)
       font-size: 56px
       margin-bottom: 30px
 
@@ -544,7 +547,7 @@ section:not(.events):not(.map), .header
     margin-top: 0
     margin-bottom: 5px
 
-    @media screen and (max-width: 370px)
+    @media screen and (max-width: 375px)
       font-size: 8px
 
   &__buttons
@@ -594,13 +597,13 @@ section:not(.events):not(.map), .header
 
     // transition: visibility 0s, opacity 0.5s linear    
 
-    @media screen and ( max-width: 370px )
+    @media screen and ( max-width: 375px )
       display: none
       // visibility: hidden
       // opacity: 0
 
   &__input
-    @media screen and ( max-width: 370px )
+    @media screen and ( max-width: 375px )
       grid-column: span 2
       
     
@@ -792,7 +795,7 @@ section:not(.events):not(.map), .header
     gap: 10px
     grid-template-columns: repeat(12, 1fr)
 
-    @media screen and ( max-width: 370px )
+    @media screen and ( max-width: 375px )
       display: none
 
   &__input
@@ -873,7 +876,7 @@ section:not(.events):not(.map), .header
     display: none
     width: 100%
   
-    @media screen and ( max-width: 370px )
+    @media screen and ( max-width: 375px )
       display: block
       
     &::after
