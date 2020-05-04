@@ -8,9 +8,36 @@ html(lang="en")
       rel="stylesheet"
       href="main.css"
       )
-  body
+  body.overflow_hidden
     header.header
       .container
+        .mobile
+          .mobile__menu
+            ul.header__list.header__list_mobile
+              li.header__item 
+                a.header__link(href="#!") HOME
+              li.header__item 
+                a.header__link(href="#about") ABOUT
+              li.header__item 
+                a.header__link(href="#team") TEAM
+              li.header__item 
+                a.header__link(href="#booking") BOOKING
+              li.header__item 
+                a.header__link(href="#menu") MENU
+              li.header__item 
+                a.header__link(href="#gallery") GALERIE
+              li.header__item 
+                a.header__link(href="#events") EVENTS
+              li.header__item 
+                a.header__link(href="#contact") CONTACT
+            ul.mobile__social
+              li.mobile__social-link
+                a(href="#!") <i class="fab fa-facebook-f"></i>
+              li.mobile__social-link
+                a(href="#!") <i class="fab fa-twitter"></i>
+              li.mobile__social-link
+                a(href="#!") <i class="fab fa-instagram"></i>
+
         .header__top
           nav.header__nav
             ul.header__list
@@ -36,10 +63,11 @@ html(lang="en")
                 a.header__link(href="#events") EVENTS
               li.header__item 
                 a.header__link(href="#contact") CONTACT
-          .mobile-menu.mobile-menu__btn
-            .mobile-menu__line
-            .mobile-menu__line
-            .mobile-menu__line
+
+          .mobile__btn
+            .mobile__line
+            .mobile__line
+            .mobile__line
 
         .header__content
           .header__schedule 
