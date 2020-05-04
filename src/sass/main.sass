@@ -335,10 +335,22 @@ section:not(.events):not(.map), .header
 
     background-color: #ffffff
 
+    transition: .2s ease-out
+
     &:first-child
       top: 0
+
     &:last-child
       top: 28px
+    
+    &_active
+      &:first-child
+        transform: translateY(14px) rotate(-45deg)
+      &:nth-child(2)
+        transform: rotate(45deg)
+      &:last-child
+        transform: translateY(-14px) rotate(45deg)
+        
       
 
 // MOBILE END
