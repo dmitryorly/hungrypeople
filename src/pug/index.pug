@@ -51,7 +51,7 @@ html(lang="en")
                 a.header__link(href="#booking") BOOKING
     
           .header__logo
-            img.header__img(src="img/svg/logo.svg")
+            img.header__img(src="img/svg/logo.svg" alt="hungrypeople logo")
     
           nav.header__nav
             ul.header__list
@@ -89,7 +89,7 @@ html(lang="en")
             a.header__social-link.hover_social(href="#!")
               i.fab.fa-instagram.header__social-icon
 
-    section#about.about
+    section#about.about.section
       .container
         .grid-container
           .grid-left
@@ -98,16 +98,16 @@ html(lang="en")
             p.about__text.text Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
           .grid-right
             .about__picture.picture.picture-decor.picture-decor_right
-              img.about__img.img(src="img/about-pic.jpg")
+              img.about__img.img(src="img/about-pic.jpg" alt="Kitchen photo")
 
     // TEAM
-    section#team.team
+    section#team.team.section
       .container
         h2.team__heading.heading.color_light OUR TEAM
         .grid-container
           .grid-left
             .team__picture.picture.picture-decor.picture-decor_left
-              img.team__img.img(src="img/team-pic.jpg")
+              img.team__img.img(src="img/team-pic.jpg" alt="Chef photo")
             
           .grid-right
             h3.team__title.title.color_light MASTER CHEF
@@ -115,7 +115,7 @@ html(lang="en")
             p.team__text.text.color_light Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
     
     // BOOKING
-    section#booking.booking
+    section#booking.booking.section
       .container
         .grid-container
           .grid-left
@@ -133,17 +133,17 @@ html(lang="en")
               
           .grid-right
             .booking__picture.picture.picture-decor.picture-decor_right
-              img.booking__img.img(src="img/booking-pic.jpg")
+              img.booking__img.img(src="img/booking-pic.jpg" alt="Booking photo")
         p.booking__caption.caption Mon - Fri: <span class="bold">8PM - 10PM</span>, Sat - Sun: <span class="bold">8PM - 3AM</span>, Phone: <span class="bold">+40 729 131 637/+40 726 458 782</span>
 
     // SPECIALTIES
-    section.specialties
+    section.specialties.section
       .container
         h2.specialties__heading.heading.color_light SPECIALTIES
         .grid-container
           .grid-left
             .specialties__picture.picture.picture-decor.picture-decor_left
-              img.specialties__img.img(src="img/specialties-pic.jpg")
+              img.specialties__img.img(src="img/specialties-pic.jpg" alt="Dish photo")
           .grid-right
             h3.specialties__title.title.color_light CHOCOLATE PANCAKES
             p.specialties__subtitle.subtitle.color_light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
@@ -154,7 +154,7 @@ html(lang="en")
           li.slider__indicator
 
     //MENU
-    section#menu.menu
+    section#menu.menu.section
       .container
         .menu__top
           h3.menu__title.title DELICIOUS MENU
@@ -179,27 +179,28 @@ html(lang="en")
             +menu-item 
           
     //EVENTS
-    section#events.events
+    section#events.events.section
       .container
         h2.events__heading.heading.color_light PRIVATE EVENTS
         .grid-container
           .grid-left
             .events__picture.picture.picture-decor.picture-decor_left
               .events__event.events__event_right WEDDINGS
-              img.events__img.img(src="img/events-img-1.jpg")
+              img.events__img.img(src="img/events-img-1.jpg" alt="Weddings photo")
           .grid-right
             .events__picture.picture.picture-decor.picture-decor_right
               .events__event.events__event_left CORPORATE PZRTIES
-              img.events__img.img(src="img/events-img-2.jpg")
+              img.events__img.img(src="img/events-img-2.jpg" alt="Corporate pzrties photo")
         p.events__caption.caption.color_light For private events please call: <span class="bold">+40 729 131 637/+40 726 458 782</span> or use the contact form.
 
-    section#gallery.gallery
-      - for (var i = 1; i <= 4; i++)
+    div#gallery.gallery.section
+      - var alts = ['Main room photo','Room from kitchen photo','Main hall photo','second room photo']
+      - for (var i = 1; i <= alts.length; i++)
         - var imgsrc = 'img/gallery-img-' + i + '.jpg' 
-        img(src=imgsrc).gallery__img
+        img(src=imgsrc alt=alts[i-1]).gallery__img
 
     //CONTACT
-    section#contact.contact
+    section#contact.contact.section
       .container
         h3.contact__title.title CONTACT
         p.contact__subtitle.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
@@ -225,7 +226,7 @@ html(lang="en")
           .contact__button.button.button_fill SEND MESSAGE
 
     //MAP
-    section.map
+    div.map.section
     //GOOGLE/YANDEX MAPS HERE
 
     //SCRIPTS
