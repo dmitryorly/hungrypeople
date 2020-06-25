@@ -280,20 +280,22 @@ section:not(.events):not(.map), .header
   z-index: 5
   overflow-y: auto
 
-  // display: none
+  display: none
   height: 100vh
   width: 100%
+  
+  background-color: #333333
+  opacity: .9
 
   transition: all .2s
 
   @media screen and ( max-width: 768px )
+    display: block
     visibility: hidden
     transform: translateX(100%)
 
   &__menu
     overflow-y: auto
-
-  background-color: #333333
 
   &_show
     @media screen and ( max-width: 768px )
