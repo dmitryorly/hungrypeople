@@ -2,7 +2,7 @@
 
 Adaptive restaurant landing page.
 
-[See the result](https://dmitryorly.github.io/hungrypeople/#booking)
+[See the result](https://dmitryorly.github.io/hungrypeople/index.html)
 
 ## Project objectives:
 - Learning [gulp](https://gulpjs.com/) task runner
